@@ -3,11 +3,13 @@ body
     background-color: aliceblue;
 }
 
-td 
+.cell
 {
     border: 1px solid black;
     height: 50px;
+    line-height:50px;
     width: 50px;
+    text-align: center;
 }
 
 .container
