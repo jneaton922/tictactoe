@@ -61,7 +61,22 @@ const GameBoard = (
             ];
         };
 
-        return { get,take_turn,reset }
+        const check_for_win = function()
+        {
+            if (board[0][0] != ' ' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) return true;
+            if (board[0][2] != ' ' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) return true;
+
+            if (board[0][0] != ' ' && board[0][0] == board[0][1] && board[0][1] == board[0][2]) return true;
+            if (board[1][0] != ' ' && board[1][0] == board[1][1] && board[1][1] == board[1][2]) return true;
+            if (board[2][0] != ' ' && board[2][0] == board[2][1] && board[2][1] == board[2][2]) return true;
+            if (board[0][1] != ' ' && board[0][1] == board[1][1] && board[2][1] == board[0][2]) return true;
+            if (board[0][0] != ' ' && board[0][0] == board[1][0] && board[2][0] == board[0][2]) return true;
+            if (board[0][2] != ' ' && board[0][2] == board[1][2] && board[2][2] == board[0][2]) return true;
+            return false;
+        }
+
+
+        return { get,take_turn,reset, check_for_win }
     }
 )();
 
@@ -75,7 +90,14 @@ const DisplayController = (
             let c = this.getAttribute("data-c");
             GameBoard.take_turn(r,c);
             update();
+            if (GameBoard.check_for_win())
+            {
+                alert( "Game over!");
+                GameBoard.reset();
+            }
+
         }
+
         for (var i =0; i<cells.length;i++)
         {
             cells[i].addEventListener('click',cell_onclick,false);
