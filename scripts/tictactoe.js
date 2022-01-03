@@ -20,12 +20,13 @@ const GameBoard = (
             [' ',' ',' '],
             [' ',' ',' ']
         ];
-        let current_symbol = "X";
-
         
-        const set = function(r,c)
+        player1 = Player("Jack","A");
+        player2 = Player("Jill","B");
+        
+        const set = function(r,c,symbol)
         {          
-            board[r][c] = current_symbol;
+            board[r][c] = symbol;
         };
 
         const next_turn = function()
@@ -83,6 +84,8 @@ const GameBoard = (
 const DisplayController = (
     function ()
     {  
+        let menu = document.getElementById("menu");
+        let start = document.getElementById("start-btn");
         let cells = document.getElementsByClassName("cell");
         let cell_onclick = function()
         {
@@ -114,5 +117,15 @@ const DisplayController = (
                 cells[i].innerHTML = current_board[r][c];
             }
         }
+
+        const start_onclick = function()
+        {
+            var board = document.getElementById("board");
+            var menu = document.getElementById("menu");
+            board.style.display = "flex";
+            menu.style.display = "none";
+        }
+        start.onclick = start_onclick;
+  
     }
 )();

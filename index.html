@@ -14,33 +14,42 @@
     <div class="container">
         <div class="header">
             <h1> Let's Play Tic Tac Toe</h1>
+            <hr>
         </div>
-
-        <div class="board">
-            
-            <table>
-                <tr>
-                    <td><div class="cell" data-r="0" data-c="0"></div></td>
-                    <td><div class="cell" data-r="0" data-c="1"></div></td>
-                    <td><div class="cell" data-r="0" data-c="2"></div></td>
-                </tr>
-                <tr>
-                    <td><div class="cell" data-r="1" data-c="0"></div></td>
-                    <td><div class="cell" data-r="1" data-c="1"></div></td>
-                    <td><div class="cell" data-r="1" data-c="2"></div></td>
-                </tr>
-                <tr>
-                    <td><div class="cell" data-r="2" data-c="0"></div></td>
-                    <td><div class="cell" data-r="2" data-c="1"></div></td>
-                    <td><div class="cell" data-r="2" data-c="2"></div></td>
-                </tr>
-            </table>
-
+        <div class="game">
+            <div id="menu" class="menu">
+                <button id="start-btn">Start Game</button>
+            </div>
+    
+            <div id="p1" class="hud">
+                <h2>player 1</h2>
+            </div>
+            <div id="board" class="board">
+                <table>
+                    <tr>
+                        <td><div class="cell" data-r="0" data-c="0"></div></td>
+                        <td><div class="cell" data-r="0" data-c="1"></div></td>
+                        <td><div class="cell" data-r="0" data-c="2"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cell" data-r="1" data-c="0"></div></td>
+                        <td><div class="cell" data-r="1" data-c="1"></div></td>
+                        <td><div class="cell" data-r="1" data-c="2"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="cell" data-r="2" data-c="0"></div></td>
+                        <td><div class="cell" data-r="2" data-c="1"></div></td>
+                        <td><div class="cell" data-r="2" data-c="2"></div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="p1" class="hud">
+                <h2>player 2</h2>
+            </div>
         </div>
-
+    
         <div class="control">
-            <button>"Reset"</button>
-            <button></button>
+            <button id="rst-btn">"Reset"</button>
         </div>
     </div>
 </body>
