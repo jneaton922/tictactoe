@@ -17,12 +17,30 @@
             <hr>
         </div>
         <div class="game">
-            <div id="menu" class="menu">
-                <button id="start-btn">Start Game</button>
-            </div>
+
     
             <div id="p1" class="hud">
                 <h2>player 1</h2>
+            </div>
+
+            <div id="menu" class="menu">
+                <form name=">
+
+                    <label for="p1">Enter player 1 name:</label> 
+                    <input type="text" name="p1" id="p1" />
+
+                    <label for="p2">Enter player 2 name:</label> 
+                    <input type="text" name="p2" id="p2" />
+
+                    <input type="radio" id="html" name="game_type" value="2P">
+                    <label for="2P">2-Players</label><br>
+                    <input type="radio" id="css" name="game_type" value="CPU">
+                    <label for="CPU">Play against CPU</label><br>
+
+                    <input id='start-btn' type="button" value="Start Game"/>
+
+                </form>
+                
             </div>
             <div id="board" class="board">
                 <table>
@@ -43,13 +61,13 @@
                     </tr>
                 </table>
             </div>
-            <div id="p1" class="hud">
+            <div id="p2" class="hud">
                 <h2>player 2</h2>
             </div>
         </div>
     
         <div class="control">
-            <button id="rst-btn">"Reset"</button>
+            <button id="rst-btn">Reset</button>
         </div>
     </div>
 </body>

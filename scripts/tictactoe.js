@@ -84,9 +84,10 @@ const GameBoard = (
 const DisplayController = (
     function ()
     {  
-        let menu = document.getElementById("menu");
         let start = document.getElementById("start-btn");
+        let reset = document.getElementById("rst-btn");
         let cells = document.getElementsByClassName("cell");
+
         let cell_onclick = function()
         {
             let r = this.getAttribute("data-r"); 
@@ -98,13 +99,23 @@ const DisplayController = (
                 alert( "Game over!");
                 GameBoard.reset();
             }
-
         }
 
         for (var i =0; i<cells.length;i++)
         {
             cells[i].addEventListener('click',cell_onclick,false);
         }
+
+        const start_onclick = function(form)
+        {
+            var board = document.getElementById("board");
+            var menu = document.getElementById("menu");
+            var form = document.
+            board.style.display = "flex";
+            menu.style.display = "none";
+            console.log(form);
+        }
+        start.onclick = start_onclick;
 
         const update = function()
         {
@@ -118,14 +129,14 @@ const DisplayController = (
             }
         }
 
-        const start_onclick = function()
+        const reset_onclick = function()
         {
             var board = document.getElementById("board");
             var menu = document.getElementById("menu");
-            board.style.display = "flex";
-            menu.style.display = "none";
+            board.style.display = "none";
+            menu.style.display = "flex";
+            GameBoard.reset();
         }
-        start.onclick = start_onclick;
-  
+        reset.onclick = reset_onclick;
     }
 )();

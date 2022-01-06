@@ -49,10 +49,16 @@ body
     width: 100%;
 }
 
-.board
+.board,.menu
 {
     display: flex;
     flex-direction: column;
+    flex-grow: 2;
     align-items:center;
     width: 90%;
+}
+
+.hud 
+{
+    flex-grow:1;
 }
