@@ -1,64 +1,27 @@
+.nonsense {
+    color: #718355;
+    color: #87986a;
+    color: #97a97c;
+    color: #b5c99a;
+    color: #cfe1b9;
+    color: #e9f5db;
+    }
 
-#board
-{
-    display: none;
-}
+body {
+    background-color: #b5c99a;
+    }
 
-button
-{
-    background-color: aqua;
-}
+.gameArea{
+    background-color: #97a97c;
+    }
 
-body
-{
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.header
-{
-    background-color: antiquewhite;
-    width: 100%;
-    text-align: center;
-}
-.cell
-{
+td {
     border: 1px solid black;
-    height: 80px;
-    line-height:80px;
-    width: 80px;
-    text-align: center;
-}
+    height: 150px;
+    width: 150px;
+    }
 
-.container
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-}
-
-.game
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-}
-
-.board,.menu
-{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
-    align-items:center;
-    width: 90%;
-}
-
-.hud 
-{
-    flex-grow:1;
-}
+.cell {
+    line-height: 100px;
+    width: 33%;
+    }

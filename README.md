@@ -1,3 +1,5 @@
-Simple Tic Tac Toe browser game as part of the Odin Project.
+# Tic Tac Toe
 
-Implemented making use of the Module and Factory design patterns.
+Tic Tac Toe game in browser as part of the Odin Project Javascript curriculum.
+
+Implemented making use of the IIFE Module and Factory design patterns.
