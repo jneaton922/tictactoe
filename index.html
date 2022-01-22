@@ -13,40 +13,74 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 
     <div class="container-fluid text-center header">
-        <h1>Let's Play Tic Tac Toe!</h1>
+        <h1 class="text-light">Let's Play Tic Tac Toe!</h1>
     </div>
 
-    <div class="container">
-        <div class="row gameArea justify-content-center py-3">
-            <div class="p1Hud text-center col-2">
-                <h1>Player 1 Stuff</h1>
-            </div>
-            <div class="col-6 text-center game">
-                <h1>GameBoard</h1>
-                <table class="m-auto">
-                    <tr>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
+    <div class="container bg-secondary border rounded">
+        <div id="pregameArea" class="row justify-content-center">
+            <form id="pregameForm" action="/#">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="p1name">Player 1 Name</label>
+                        <input type="text" class="form-control" id="p1name">
+                    </div>
+                    <div class="col">
+                        <label class='d-block' for="buttons">Select Symbol</label>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary text-info">
+                                <input type="radio" name="p1options" id="optionX"> X
+                            </label>
+                            <label class="btn btn-secondary text-danger">
+                                <input type="radio" name="p1options" id="optionO"> O
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row justify-content-center">
+                    <div class="col form-group">
+                        <label for="p2name" class="col-form-label">Player 2 Name</label>
+                        <input type="text" class="form-control" id="p2name">
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="p2sym" class="col-form-label d-block">Player 2 Symbol</label>
+                        <span id="p2sym" class="btn btn-dark text-danger disabled">O</span>
+                    </div>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" id="startBtn" class="btn btn-lg btn-light">Start</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div id="gameArea" class="row justify-content-center py-3 d-none">
+            <div id="p1hud" class="text-center col-2"></div>
+            <div class="col-6 text-center">
+                <table class='container-fluid'>
+                    <tr class='row'>
+                        <td class="cell align-middle text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
                     </tr>
-                    <tr>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
+                    <tr class='row'>
+                        <td class="cell text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
                     </tr>
-                    <tr>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
-                        <td class="border border-light"></td>
+                    <tr class='row'>
+                        <td class="cell text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
+                        <td class="cell text-center btn col-4 border border-light"></td>
                     </tr>
                 </table>
             </div>
-            <div class="col-2 text-center p2Hud">
-                <h1>Player 2 Stuff</h1>
-            </div>
+            <div id="p2hud" class="col-2 text-center"></div>
         </div>
     </div>
 

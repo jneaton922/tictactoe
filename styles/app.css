@@ -1,27 +1,9 @@
-.nonsense {
-    color: #718355;
-    color: #87986a;
-    color: #97a97c;
-    color: #b5c99a;
-    color: #cfe1b9;
-    color: #e9f5db;
-    }
-
-body {
-    background-color: #b5c99a;
-    }
-
-.gameArea{
-    background-color: #97a97c;
-    }
-
-td {
-    border: 1px solid black;
+td.cell {
     height: 150px;
-    width: 150px;
+    font-size: 3rem;
+    line-height: 3;
     }
 
-.cell {
-    line-height: 100px;
-    width: 33%;
-    }
+tr{
+    vertical-align: middle;
+}
